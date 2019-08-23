@@ -40,10 +40,18 @@
         </dependency>
 
         <dependency>
+            <groupId>com.zf.dao</groupId>
+            <artifactId>zf-module-dao</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.zf.service</groupId>
             <artifactId>zf-module-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+
         <!-- maven可以继承父项目中的依赖，所以可以删除子模块中定义 -->
         <!--<dependency>-->
         <!--<groupId>org.springframework.boot</groupId>-->
