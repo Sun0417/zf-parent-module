@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
+    <!-- 基本信息 -->
+    <description>尊法项目</description>
     <modelVersion>4.0.0</modelVersion>
+    <name>zf-parent-module</name>
+    <packaging>pom</packaging><!-- 注意：主模块 修改jar为pom -->
+
+    <!-- 项目说明：这里作为聚合工程的父工程 -->
+    <groupId>com.zf</groupId>
+    <artifactId>zf-parent-module</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <!-- 继承说明：这里继承SpringBoot提供的父工程 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.7.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.zf</groupId>
-    <artifactId>zf-parent-module</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
 
-    <packaging>pom</packaging><!-- 注意：主模块 修改jar为pom -->
-
-    <name>zf-parent-module</name>
-    <description>尊法项目</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,17 +32,15 @@
 
     <!--注意：加入子模块-->
     <modules>
-        <module>zf-module-api</module>
         <module>zf-module-dao</module>
-        <module>zf-module-service</module>
         <module>zf-module-service-impl</module>
-        <module>zf-module-utils</module>
-        <module>zf-module-common</module>
-        <module>zf-module-web-api</module>
-        <module>zf-module-admin-api</module>
+        <module>zf-module-service</module>
+        <module>zf-module-web</module>
+        <module>zf-utils</module>
     </modules>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -52,6 +56,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
     </dependencies>
 
     <build>

@@ -2,28 +2,26 @@ package com.zf.dao.entity;
 
 import lombok.Data;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
  * Created with IntelliJ IDEA.
  * User: 段誉
- * Date: 2019/8/23
- * Time: 14:17
+ * Date: 2019/8/26
+ * Time: 13:42
  * Description: No Description
  */
 @Data
-public class User implements Serializable {
-    private static final long serialVersionUID = -4320385382292396055L;
+@Entity
+@Table(name = "zf_user")
+public class User  implements Serializable {
+    private static final long serialVersionUID = -1631088827366485918L;
 
-    private String userName;
+    @Id
+    private Integer id;
 
-    private String trueName;
-
-    private String passWord;
-
-    private String affiliatedGroup;
-
-
-
-
+    private String  username;
 }

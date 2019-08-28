@@ -3,55 +3,41 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- 基本信息 -->
+    <artifactId>service</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>service</name>
+    <description>接口服务层</description>
+    <packaging>jar</packaging>
+
+    <!-- 继承本项目的父工程 -->
     <parent>
         <groupId>com.zf</groupId>
         <artifactId>zf-parent-module</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath><!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.zf.service</groupId>
-    <artifactId>zf-module-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>zf-module-service</name>
-    <description>服务端</description>
 
-    <packaging>jar</packaging>
+    <properties>
+        <!--<java.version>1.8</java.version>-->
+    </properties>
 
-    <!-- maven可以继承父项目中的参数，所以可以删除子模块中定义 -->
-    <!--<properties>-->
-    <!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
-    <!--<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>-->
-    <!--<java.version>1.8</java.version>-->
-    <!--</properties>-->
-
+    <!-- Web模块相关依赖 -->
     <dependencies>
 
         <dependency>
-            <groupId>com.zf.dao</groupId>
-            <artifactId>zf-module-dao</artifactId>
+            <groupId>com.zf</groupId>
+            <artifactId>dao</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
-        <!-- maven可以继承父项目中的依赖，所以可以删除子模块中定义 -->
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--<artifactId>spring-boot-starter</artifactId>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--<artifactId>spring-boot-starter-test</artifactId>-->
-        <!--<scope>test</scope>-->
-        <!--</dependency>-->
     </dependencies>
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+            <!--</plugin>-->
         </plugins>
     </build>
 

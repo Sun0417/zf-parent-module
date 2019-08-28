@@ -2,38 +2,35 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+
     <parent>
         <groupId>com.zf</groupId>
         <artifactId>zf-parent-module</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath><!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.zf.dao</groupId>
-    <artifactId>zf-module-dao</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>zf-module-dao</name>
-    <description>数据模型层</description>
 
+    <!--<groupId>com.zf</groupId>-->
+    <artifactId>dao</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>dao</name>
+    <description>数据层</description>
     <packaging>jar</packaging>
 
-    <!-- maven可以继承父项目中的参数，所以可以删除子模块中定义 -->
+
     <properties>
         <mysql.version>6.0.6</mysql.version>
         <druid.version>1.1.11</druid.version>
-    <!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
-    <!--<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>-->
-    <!--<java.version>1.8</java.version>-->
+        <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
-
         <!--JPA 驱动-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-
         <!--mysql 驱动-->
         <dependency>
             <groupId>mysql</groupId>
@@ -51,25 +48,14 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <!-- maven可以继承父项目中的依赖，所以可以删除子模块中定义 -->
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--<artifactId>spring-boot-starter</artifactId>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--<artifactId>spring-boot-starter-test</artifactId>-->
-        <!--<scope>test</scope>-->
-        <!--</dependency>-->
     </dependencies>
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+            <!--</plugin>-->
         </plugins>
     </build>
 
