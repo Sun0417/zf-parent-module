@@ -14,5 +14,12 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserRepository extends JpaRepository<User,Integer> {
 
+    /**
+     *
+     * @param tel
+     * @return
+     */
+    User findUserByTelephone(String tel);
+
 }
 

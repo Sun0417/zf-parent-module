@@ -20,7 +20,12 @@ public class UserServiceImpl implements UserService {
     UserRepository userRepository;
 
     @Override
-    public User selectUserList(Integer id) {
+    public User findUserById(Integer id) {
         return userRepository.findById(id).get();
+    }
+
+    @Override
+    public User findUserByLogin(String tel) {
+        return userRepository.findUserByTelephone(tel);
     }
 }

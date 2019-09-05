@@ -14,5 +14,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserService {
 
-    User selectUserList(Integer id);
+    User findUserById(Integer id);
+
+    User findUserByLogin(String tel);
 }

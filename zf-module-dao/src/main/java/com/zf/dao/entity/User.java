@@ -2,6 +2,7 @@ package com.zf.dao.entity;
 
 import lombok.Data;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -24,4 +25,11 @@ public class User  implements Serializable {
     private Integer id;
 
     private String  username;
+
+    @Column
+    private String telephone;
+
+    private String  password;
+
+
 }
